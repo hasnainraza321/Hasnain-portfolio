@@ -1,0 +1,31 @@
+# Hasnain Raza — Portfolio & Capabilities
+
+> Full-Stack Agentic AI Engineer & Automation Developer
+
+## Identity & Professional Profile
+- Name: Hasnain Raza
+- Role: Full-Stack Agentic AI Engineer & Automation Developer
+- Background: Business Administration & Marketing combined with deep technical AI and full-stack engineering.
+- Focus: Turning manual, repetitive business workflows into autonomous AI agent pipelines, conversational voice agents, and scalable web applications.
+
+## Core Technical Skills
+- Agentic AI Engineering: Autonomous multi-agent systems, LLM reasoning workflows, tool-calling agents, OpenAI / Anthropic / Groq integrations.
+- Voice AI Automation: Real-time conversational voice agents, Retell AI, latency optimization, conversational call handling.
+- Full-Stack Web Development: Next.js (App Router), React 19, TypeScript, Tailwind CSS, Python (FastAPI/Flask), REST & GraphQL APIs.
+- Workflow & CRM Automation: N8N workflow orchestration, HubSpot / Salesforce / webhook integrations, lead qualification pipelines.
+
+## Portfolio Sections
+- Home: Overview of business AI engineering capabilities and value proposition.
+- About: Philosophy bridging business strategy with technical AI automation.
+- Expertise: Technical pillars covering Agentic AI, Voice AI, Full-Stack Engineering, and Workflow Automation.
+- Projects: Comprehensive showcase across web applications, voice agents, chatbots, NLP, and CRM automations.
+- Process: 4-stage business collaboration lifecycle (Discover, Plan, Create, Deliver).
+- Contact: Direct channels for consultation and project inquiries.
+
+## Verified Contact Channels
+- Email: hr1228744@gmail.com
+- WhatsApp: +92 319 8185308 (03198185308)
+- LinkedIn: https://www.linkedin.com/in/hasnain-raza-47b6b2294/
+- GitHub: https://github.com/hasnainraza321
+- Instagram: https://www.instagram.com/hasn_ainraza.ai/
+

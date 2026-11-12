@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Default: Dark Theme Semantics (Midnight Obsidian + Electric Cyan-Blue) */
+  --bg-main: #050811;
+  --bg-card: #0B1224;
+  --bg-card-secondary: #0F172A;
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --color-accent: #38BDF8;
+  --color-accent-hover: #7DD3FC;
+  --border-subtle: rgba(56, 189, 248, 0.16);
+  --border-card: rgba(56, 189, 248, 0.25);
+
+  /* Legacy tokens */
+  --color-cream: #F1F5F9;
+  --color-ink: #060A14;
+  --color-orange: #38BDF8;
+  --color-blue-deep: #0284C7;
+  --color-midnight: #050811;
+  --color-midnight-card: #0B1224;
+  --color-wave-light: #EEF2F7;
+  --color-text-dark: #0B1120;
+}
+
+/* Light Theme — Approved Brand Visual Identity (Cream, Ink Black, and Orange) */
+html.light,
+[data-theme="light"] {
+  --bg-main: #F2E9D8;
+  --bg-card: #FAF5EB;
+  --bg-card-secondary: #EADBCA;
+  --text-primary: #171717;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+  --color-accent: #E87527;
+  --color-accent-hover: #D45F12;
+  --border-subtle: #E2D5C0;
+  --border-card: #D8C6AD;
+
+  /* Overrides for light palette */
+  --color-cream: #171717;
+  --color-ink: #F2E9D8;
+  --color-orange: #E87527;
+  --color-blue-deep: #D45F12;
+  --color-midnight: #F2E9D8;
+  --color-midnight-card: #FAF5EB;
+  --color-wave-light: #FAF5EB;
+  --color-text-dark: #171717;
+}
+
+html.dark,
+[data-theme="dark"] {
+  --bg-main: #050811;
+  --bg-card: #0B1224;
+  --bg-card-secondary: #0F172A;
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --color-accent: #38BDF8;
+  --color-accent-hover: #7DD3FC;
+  --border-subtle: rgba(56, 189, 248, 0.16);
+  --border-card: rgba(56, 189, 248, 0.25);
+
+  --color-cream: #F1F5F9;
+  --color-ink: #060A14;
+  --color-orange: #38BDF8;
+  --color-blue-deep: #0284C7;
+  --color-midnight: #050811;
+  --color-midnight-card: #0B1224;
+  --color-wave-light: #EEF2F7;
+  --color-text-dark: #0B1120;
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-ink: var(--color-ink);
+  --color-orange: var(--color-orange);
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-serif: var(--font-playfair), Georgia, Cambria, "Times New Roman", serif;
+}
+
+/* 1. Global Box Sizing & Reset Foundation */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Reduced-Motion-Aware Smooth Scrolling & Base Document Defaults */
+html {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 3. Base Background & Typography */
+body {
+  min-height: 100dvh;
+  margin: 0;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.font-editorial {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+}
+
+code,
+pre,
+kbd {
+  font-family: var(--font-mono);
+}
+
+/* 4. Accessible Selection & Keyboard Focus Styles for Both Themes */
+html.dark ::selection,
+[data-theme="dark"] ::selection {
+  background-color: #38BDF8;
+  color: #050811;
+}
+
+html.light ::selection,
+[data-theme="light"] ::selection {
+  background-color: #E87527;
+  color: #FFFFFF;
+}
+
+html.dark :focus-visible,
+[data-theme="dark"] :focus-visible {
+  outline: 2px solid #38BDF8;
+  outline-offset: 3px;
+}
+
+html.light :focus-visible,
+[data-theme="light"] :focus-visible {
+  outline: 2px solid #E87527;
+  outline-offset: 3px;
+}
+
+/*
+ * 5. Layered Wave Divider Design System
+ * Light (default when html lacks .dark): cream → peach → orange accent layers.
+ * Dark: deep navy → charcoal slate → muted grey-blue layers.
+ * The divider background and front layer come from per-instance variables
+ * (--lw-from-* / --lw-to-*) so each section hand-off is seamless.
+ */
+.layered-wave {
+  --lw-1: #F7E0CC;
+  --lw-2: #F2B48A;
+  --lw-3: #E87527;
+  --lw-to: var(--lw-to-light);
+  background-color: var(--lw-from-light);
+  transition: background-color 200ms ease;
+}
+
+html.dark .layered-wave,
+[data-theme="dark"] .layered-wave {
+  --lw-1: #0F1A2E;
+  --lw-2: #1A2638;
+  --lw-3: #2E3D55;
+  --lw-to: var(--lw-to-dark);
+  background-color: var(--lw-from-dark);
+}
+
+.layered-wave path {
+  transition: fill 200ms ease;
+}
